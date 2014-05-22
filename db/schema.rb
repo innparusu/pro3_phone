@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522164820) do
+ActiveRecord::Schema.define(version: 20140522165217) do
 
   create_table "entries", force: true do |t|
     t.integer  "user_id"
@@ -29,6 +29,14 @@ ActiveRecord::Schema.define(version: 20140522164820) do
     t.integer  "period_id"
     t.string   "day"
     t.integer  "lecture_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "periods", force: true do |t|
+    t.integer  "period_number"
+    t.time     "begin_time"
+    t.time     "end_time"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522163500) do
+ActiveRecord::Schema.define(version: 20140522164356) do
 
   create_table "entries", force: true do |t|
     t.integer  "user_id"
     t.integer  "lecture_id"
     t.integer  "late_count"
     t.integer  "absence_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lectures", force: true do |t|
+    t.string   "name"
+    t.string   "teachr"
+    t.integer  "room_id"
+    t.integer  "period_id"
+    t.string   "day"
+    t.integer  "lecture_count"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

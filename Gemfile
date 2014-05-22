@@ -40,3 +40,5 @@ gem 'spring',        group: :development
 
 # java script runtime
 gem 'therubyracer'
+
+gem 'mysql2'

@@ -11,13 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140522165217) do
+ActiveRecord::Schema.define(version: 20140522165550) do
 
   create_table "entries", force: true do |t|
     t.integer  "user_id"
     t.integer  "lecture_id"
     t.integer  "late_count"
     t.integer  "absence_count"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "lates", force: true do |t|
+    t.integer  "lecture_id"
+    t.integer  "user_id"
+    t.boolean  "late"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

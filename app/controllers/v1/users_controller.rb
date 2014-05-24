@@ -3,7 +3,11 @@ module V1
     protect_from_forgery with: :null_session
     def create
       @user = User.new
-      @user.name = params[:name]
+      @user.name         = params[:name]
+      @user.grade        = params[:grade].to_i
+      @user.number       = params[:number]
+      @user.mail_address = params[:mail_address]
+      @user.password     = params[:password]
       @user.save
       respond_to do |format|
         format.json { render json: @user}

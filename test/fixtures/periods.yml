@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  period_number: 1
+  begin_time: 2014-05-22 16:52:17
+  end_time: 2014-05-22 16:52:17
+
+two:
+  period_number: 1
+  begin_time: 2014-05-22 16:52:17
+  end_time: 2014-05-22 16:52:17

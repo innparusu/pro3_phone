@@ -42,3 +42,6 @@ gem 'spring',        group: :development
 gem 'therubyracer'
 
 gem 'mysql2'
+
+# read-line
+gem 'rb-readline'

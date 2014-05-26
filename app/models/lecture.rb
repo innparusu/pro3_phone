@@ -4,6 +4,6 @@ class Lecture < ActiveRecord::Base
     belongs_to :period
     has_many :lates
 
-    has_many :users, through:  :entry
-    has_many :users, through: :late
+    has_many :users, through:  :entries
+    has_many :users, through: :lates
 end

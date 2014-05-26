@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-    has_many :entry
-    has_many :late
+    has_many :entries
+    has_many :lates
 
-    has_many :lecture, through: :entry
-    has_many :lecture, through: :late
+    has_many :lectures, through: :entry
+    has_many :lectures, through: :late
 end

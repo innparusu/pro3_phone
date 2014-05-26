@@ -1,4 +1,4 @@
 class Period < ActiveRecord::Base
-    has_many :lecture
-    has_many :room, through: :lecture
+    has_many :lectures
+    has_many :rooms, through: :lecture
 end

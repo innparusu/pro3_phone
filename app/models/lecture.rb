@@ -1,9 +1,9 @@
 class Lecture < ActiveRecord::Base
-    has_many :entry
+    has_many :entries
     belongs_to :room
     belongs_to :period
-    has_many :late
+    has_many :lates
 
-    has_many :user, through:  :entry
-    has_many :user, through: :late
+    has_many :users, through:  :entry
+    has_many :users, through: :late
 end

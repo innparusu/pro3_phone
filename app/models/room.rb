@@ -1,3 +1,3 @@
 class Room < ActiveRecord::Base
-    has_many :lecture
+    has_many :lectures
 end

@@ -1,7 +1,7 @@
 class V1::UsersController < ApplicationController
   protect_from_forgery with: :null_session
   def create
-    @user = User.new
+    @user              = User.new
     @user.name         = params[:name]
     @user.grade        = params[:grade].to_i
     @user.number       = params[:number]

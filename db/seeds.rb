@@ -25,9 +25,9 @@ Period.create!(period_number: 5,
               )
 
 
-Room.create!(name: "工1-321")
-Room.create!(name: "工1-322")
-Room.create!(name: "工2-313")
+Room.create!(name: "工1-321", latitude:26.253330, longitude:127.766570)
+Room.create!(name: "工1-322", latitude:26.253470, longitude:127.766430)
+Room.create!(name: "工2-313", latitude:26.253270, longitude:127.765730)
 
 period = Period.find_by(period_number: 5)#５限の講義を設定
 period.lectures.create!(name:"プログラミング３",

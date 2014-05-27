@@ -21,4 +21,17 @@ class V1::UsersController < ApplicationController
       format.json { render json: @user }
     end
   end
+
+  def signin
+    @user = User.find_by(number: params[:id])
+    if @user.password == params[:password]
+      respond_to do |format|
+        format.json { render json: @user }
+      end
+    else
+      respond_to do |format|
+        format.json { render json: nil}
+      end
+    end
+  end
 end

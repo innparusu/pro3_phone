@@ -8,7 +8,9 @@ Rails.application.routes.draw do
     resources :entries
     resources :lectures do
       collection do
-        get 'show_all_by_period_and_day'
+        post 'show_all_by_period_and_day'
+      end
+      member do
         get 'show_all_by_user'
       end
     end

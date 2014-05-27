@@ -1,5 +1,5 @@
 class V1::EntriesController < ApplicationController
-  protected_from_forgery with: :null_session
+  protect_from_forgery with: :null_session
   def create
     @user                = User.find(params[:user_id])
     @lecture             = Lecture.find(params[:lecture_id])

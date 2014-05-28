@@ -8,19 +8,11 @@ class Late < ActiveRecord::Base
     student         = User.find(self.user_id)
     st_number       = student.number
     st_name         = student.name
-    #st_password    = student.password 
 
-    #lecture        = Lecture.find(self.lecture_id)
-    #lecture_name   = lecture.name 
-    #teacher_name    = lecture.teacher
-    #count          = lecture.lecture_count
-
-    #late           = Late.find(self.late_id)
-    #late_bool      = late.late
-
-    lecture_name    = 'アルゴリズムとデータ構造'
-    teacher_name    = 'nkmr'
-    count           = 7
+    lecture         = Lecture.find(self.lecture_id)
+    lecture_name    = lecture.name 
+    teacher_name    = lecture.teacher
+    count           = lecture.lecture_count
 
     # ユーザ情報
     user     = 'observer'
@@ -45,7 +37,7 @@ class Late < ActiveRecord::Base
     end
     
     description << "次は気を付けます\n"
-    description << "合計欠席回数 \s  #{count} \s 回\n"
+    description << "講義回数 \s  #{count} \s 回\n"
 
     # カテゴリ ( 配列で設定 )
     category = [ lecture_name ]
